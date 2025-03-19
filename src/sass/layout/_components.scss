@@ -1,0 +1,20 @@
+@use "../abstracts" as a;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  color: a.$color-grey-3;
+
+  & a:link,
+  & a:visited {
+    color: a.$color-dark-blue;
+    font-weight: a.$font-weight-semi-bold;
+    text-decoration: none;
+  }
+
+  & a:hover,
+  & a:active {
+    color: a.$color-primary;
+  }
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: hsl(224, 10%, 45%);
+  background-color: hsl(214, 17%, 92%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(224, 10%, 45%);
+}
+.attribution a:link, .attribution a:visited {
+  color: hsl(219, 29%, 14%);
+  font-weight: 600;
+  text-decoration: none;
+}
+.attribution a:hover, .attribution a:active {
+  color: hsl(264, 82%, 80%);
+}

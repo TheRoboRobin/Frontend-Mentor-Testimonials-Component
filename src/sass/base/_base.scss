@@ -1,0 +1,20 @@
+@use "../abstracts" as a;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: a.$font-family-barlow;
+  font-size: a.$font-small;
+  font-weight: a.$font-weight-semi-normal;
+  color: a.$color-grey-3;
+  background-color: a.$color-grey-1;
+}
