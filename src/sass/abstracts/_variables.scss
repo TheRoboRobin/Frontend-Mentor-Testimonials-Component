@@ -14,11 +14,26 @@ $color-black: hsl(0, 0%, 7%);
 
 //typography
 
-$font-small: 1.3rem;
+$font-small: 1.4rem;
+$font-medium: 1.6rem;
+$font-large: 2.2rem;
+$font-larger: 4.8rem;
 
 $font-family-barlow: "Barlow Semi Condensed", sans-serif;
 
-$font-weight-semi-normal: 500;
+$font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 
 //spacing
+
+$gap-small: 2.4rem;
+$gap-large: 4.8rem;
+
+//breakpoints
+
+$screen-smaller: 28em;
+$screen-small: 37.5em;
+$screen-medium: 50em;
+$screen-large: 56.25em;
+$screen-larger: 65em;
+$screen-largest: 78em;

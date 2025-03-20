@@ -94,3 +94,16 @@ project, in particular, was outstanding. It took my learning to the next level i
 could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
 experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
 100% recommend! ”
+
+### Layout
+
+site container
+-main.testimonials
+--div.testimonial testimonial(--primary,grey,white,dark-blue/--tl, tm, r, bl bm)
+---testimonial**author
+----img.testimonial**image
+----p.testimonial**name
+----p.testimonial**verified
+---p.testimonial**title
+---blockquote.testimonial**quote
+-footer.attribution

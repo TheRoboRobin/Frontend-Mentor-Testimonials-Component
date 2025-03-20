@@ -9,12 +9,17 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: a.$screen-large) {
+    font-size: 56.25%;
+  }
 }
 
 body {
   font-family: a.$font-family-barlow;
   font-size: a.$font-small;
-  font-weight: a.$font-weight-semi-normal;
+  font-weight: a.$font-weight-medium;
+  line-height: 1.6;
   color: a.$color-grey-3;
   background-color: a.$color-grey-1;
 }

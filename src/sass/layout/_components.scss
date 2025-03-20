@@ -1,9 +1,196 @@
 @use "../abstracts" as a;
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.testimonial {
+  --_text-main: var(--text-main);
+  --_text-secondary: var(--text-secondary);
+  --_background: var(--background);
+  --_border: var(--border);
+  --_quote: var(--quote);
 
+  padding: 3.2rem;
+  border-radius: 1rem;
+  box-shadow: 1.2rem 1.2rem 4rem rgba(a.$color-grey-4, 0.3);
+  gap: a.$gap-small;
+
+  position: relative;
+
+  color: var(--_text-main);
+  background-color: var(--_background);
+
+  @media only screen and (max-width: a.$screen-smaller) {
+    padding: 4rem;
+  }
+
+  &__author {
+    gap: 1.2rem;
+    z-index: 100;
+  }
+
+  &__img {
+    height: 3.2rem;
+    width: 3.2rem;
+    border: 2px solid var(--_border);
+    border-radius: 50%;
+
+    @media only screen and (max-width: a.$screen-smaller) {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+
+  &__text {
+    font-weight: a.$font-weight-medium;
+    color: var(--_text-secondary);
+  }
+
+  &__name {
+    font-size: a.$font-medium;
+  }
+
+  &__verified {
+    font-size: a.$font-small;
+  }
+
+  &__title {
+    font-size: a.$font-large;
+    line-height: 1.2;
+    font-weight: a.$font-weight-semi-bold;
+    z-index: 100;
+  }
+
+  &__quote {
+    color: var(--_text-secondary);
+    font-size: a.$font-small;
+    z-index: 100;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -7.2rem;
+      right: 3rem;
+      font-size: 58rem;
+      line-height: 1;
+      font-family: sans-serif;
+      color: var(--_quote);
+      z-index: 1;
+    }
+  }
+
+  // color variants
+  &--primary {
+    --text-main: #{a.$color-white};
+    --text-secondary: #{a.$color-primary-light};
+    --background: #{a.$color-primary-dark};
+    --border: #{a.$color-primary};
+    --quote: #{rgba(a.$color-primary-light, 0.4)};
+
+    @media only screen and (max-width: a.$screen-small) {
+      --quote: transparent;
+    }
+  }
+  &--grey {
+    --text-main: #{a.$color-grey-1};
+    --text-secondary: #{a.$color-white};
+    --background: #{a.$color-grey-4};
+    --border: #{a.$color-grey-4};
+    --quote: transparent;
+  }
+  &--white {
+    --text-main: #{a.$color-grey-4};
+    --text-secondary: #{a.$color-grey-3};
+    --background: #{a.$color-white};
+    --border: #{a.$color-white};
+    --quote: transparent;
+  }
+  &--dark-blue {
+    --text-main: #{a.$color-grey-1};
+    --text-secondary: #{a.$color-white};
+    --background: #{a.$color-dark-blue};
+    --border: #{a.$color-primary-dark};
+    --quote: transparent;
+  }
+
+  //placement variants
+  &--tl {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+
+    @media only screen and (max-width: a.$screen-medium) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+
+    @media only screen and (max-width: a.$screen-small) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  &--tm {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+    @media only screen and (max-width: a.$screen-medium) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    @media only screen and (max-width: a.$screen-small) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  &--bl {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    @media only screen and (max-width: a.$screen-medium) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    @media only screen and (max-width: a.$screen-small) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  &--bm {
+    grid-column: 2 / span 2;
+    grid-row: 2 / 3;
+
+    @media only screen and (max-width: a.$screen-medium) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+
+    @media only screen and (max-width: a.$screen-small) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  &--r {
+    grid-column: 4 / 5;
+    grid-row: 1 / -1;
+
+    @media only screen and (max-width: a.$screen-larger) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+
+    @media only screen and (max-width: a.$screen-medium) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+    }
+
+    @media only screen and (max-width: a.$screen-small) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+}
+
+.attribution {
+  font-size: a.$font-small;
+  text-align: center;
   color: a.$color-grey-3;
 
   & a:link,

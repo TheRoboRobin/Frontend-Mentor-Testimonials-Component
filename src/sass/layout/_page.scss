@@ -1,0 +1,38 @@
+@use "../abstracts" as a;
+
+.site-container {
+  max-width: 120rem;
+  margin: 10vh auto;
+
+  gap: a.$gap-large;
+
+  @media only screen and (max-width: a.$screen-largest) {
+    padding: 2.4rem;
+  }
+
+  @media only screen and (max-width: a.$screen-smaller) {
+    margin: 5vh auto;
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20%, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: a.$gap-small;
+
+  @media only screen and (max-width: a.$screen-larger) {
+    grid-template-columns: repeat(3, minmax(20%, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media only screen and (max-width: a.$screen-medium) {
+    grid-template-columns: repeat(2, minmax(20%, 1fr));
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  @media only screen and (max-width: a.$screen-small) {
+    grid-template-columns: 1fr;
+  }
+}
