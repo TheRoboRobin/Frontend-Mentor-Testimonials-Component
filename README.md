@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/four-card-feature-gGSi-woVss)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/testimonials-component-dPgvG1e0Z6)
 - Live Site URL: [Github](https://theroborobin.github.io/Frontend-Mentor-Testimonials-Component/)
 
 ## My process
